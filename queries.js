@@ -6,7 +6,7 @@ var options = {
 };
 
 var pgp = require("pg-promise")(options);
-var connectionString = "postgres://testpuppies:testpuppies@localhost:5432/lyre";
+var connectionString = process.env.DATABASE_URL;
 var db = pgp(connectionString);
 
 // add query functions
